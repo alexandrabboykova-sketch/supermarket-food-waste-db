@@ -99,7 +99,10 @@ These queries demonstrate the use of table joins, aggregation, grouping, filteri
 ## How to Use
 
 Run the files in the following order:
-All code was created and ran in dbeaver 
+
+All code was created and ran in dbeaver.
+
+To try it out highlight each section and press run.
 
 1 `schema.sql` - creates the database structure.
 2 `data.sql` - populates the database with mock data.

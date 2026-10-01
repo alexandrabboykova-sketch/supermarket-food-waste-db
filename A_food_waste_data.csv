@@ -1,0 +1,21 @@
+name,category_id,quantity_wasted,unit,sold_quantity,sold_unit,waste_percentage
+Potato,2,10000,kg,1616,ton,0.62
+Lettuce,2,7310,kg,349,ton,2.1
+Tomato,2,6750,kg,743,ton,0.9
+Sweet pepper,2,5370,kg,271,ton,1.9
+Carrot,2,4500,kg,439,ton,1
+Banana,1,4370,kg,768,ton,0.57
+Apple,1,3780,kg,755,ton,0.5
+Orange,1,3740,kg,547,ton,0.68
+Grape,1,3660,kg,159,ton,2.3
+Pear,1,3060,kg,248,ton,1.2
+Tamarillo,1,57.5,kg,43.5,kg,57
+Pitaya,1,10.4,kg,10.8,kg,49
+Redcurrant,1,52.6,kg,57.3,kg,48
+Pepino,1,12.3,kg,16.3,kg,43
+Prickly pear,2,123,kg,166,kg,43
+Oyster mushroom,2,199,kg,312,kg,39
+Carambola,2,179,kg,346,kg,34
+Rambutan,2,8.57,kg,17.9,kg,33
+Fig,1,228,kg,499,kg,31
+Papaya,1,117,kg,342,kg,25

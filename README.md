@@ -96,6 +96,32 @@ The results are then ordered by the quantity wasted in descending order.
 
 These queries demonstrate the use of table joins, aggregation, grouping, filtering, and sorting to analyse the food waste data.
 
+## Real-world data
+
+### Data cleaning
+
+- Missing data : Brazil has no empty cells. US had empty "Average" and "Total" rows, which we removed. 
+- Dates : Brazil mixes date format (first month, or first day). We changed them to year->month->day. The US only has years, so we used 2012.
+- Duplicates: "Pepper" appeared twice in Brazil Store 3, so we added them together.
+- Names: Some names differed, like "Banana" and "Bananas", so we made all names singular.
+- Extra: We convereted pounds to kg. Extra US columns like percentages were not used.
+
+### Schema changes for real data
+
+The real data did not fit some of our constraints, so we changed some of them:
+
+- Product price, shelf life and supplier can now be empty, because the datasets did not include them
+- Disposal method can be empty , because it is not reported in the datasets
+- Waste amount is now a decimal, because real data is in kg with decimals and large numbers
+- The single date turned into start and end date, because real data covers a week or a year
+- Added a unit column, because our sample data counts items, the real data uses kg
+
+Changes are in `schema_changes.sql` .
+
+Not all columns were used: from dataset B we only stored the total wasted amount
+  (converted to kg). Waste percentages, retail weight and non-edible share were left out
+  because our schema has no attributes for them.
+
 ## How to Use
 
 Run the files in the following order:

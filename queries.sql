@@ -1,5 +1,5 @@
 USE foodwaste;
--- this is for part 4 its just to show that our queries work 
+-- this is for part 4 its just to show that our queries work
 INSERT INTO product
 (product_id, name, price, shelf_life, category_id, supplier_id)
 VALUES
@@ -25,7 +25,7 @@ DELETE FROM product
 WHERE product_id = 13;
 
 
-SELECT 
+SELECT
     supermarket.name AS supermarket_name,
     SUM(food_waste.quantity_wasted) AS total_food_wasted
 FROM supermarket
@@ -47,7 +47,7 @@ JOIN food_waste
 GROUP BY category.category_id, category.category_name
 ORDER BY food_wasted DESC;
 
--- This Query answers which products were wasted because they Experied. 
+-- This Query answers which products were wasted because they Experied.
 
 SELECT
     product.name AS product,
@@ -56,5 +56,5 @@ SELECT
 FROM product
 JOIN food_waste
     ON product.product_id = food_waste.product_id
-WHERE food_waste.reason = 'Expired' 
+WHERE food_waste.reason = 'Expired'
 ORDER BY food_waste.quantity_wasted DESC;

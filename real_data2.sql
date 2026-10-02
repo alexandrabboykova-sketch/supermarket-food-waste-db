@@ -1,9 +1,9 @@
 USE foodwaste;
 
--- Database C: Mattias, et. al. (2012). Swedish markets - in store waste (tons converted to kgs)
--- tamarillo https://www.researchgate.net/publication/267098364_Postharvest_behavior_of_tamarillo_Solanum_betaceum_Cav_treated_with_CaCl2_under_different_storage_temperatures - taking the largest value!
--- shelf life in days! 
--- price / kg found on the official albert Heijn site https://www.ah.nl/ .
+-- Database C: Mattias, et. al. (2012). Swedish markets - in store waste (tons converted to kgs).
+-- Expiry dates: biggest dates taken: Yadav and Sinha (2024), Pinzón-Gómez et al. (2014).
+-- shelf life in days
+-- price / kg found on the official albert Heijn site Albert Heijn (n.d.).
 
 
 INSERT INTO supermarket (supermarket_id, name, country) VALUES

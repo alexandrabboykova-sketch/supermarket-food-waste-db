@@ -20,6 +20,8 @@ The database consists of seven tables:
 6 `inventory` - Stores the products available at each supermarket, including quantity and expiration date.
 7 `food_waste` - Records products that have been wasted, including the supermarket, product, disposal method, quantity, date, and reason.
 
+
+
 The tables are connected using primary keys and foreign keys based on the project's ERD.
 
 ## Files
@@ -133,7 +135,9 @@ To try it out highlight each section and press run.
 1 `schema.sql` - creates the database structure.
 2 `data.sql` - populates the database with mock data.
 3 `queries.sql` - runs database operations and analysis queries.
+4 ⁠ real_data.sql ⁠ + ⁠ real_data2.sql ⁠ - runs the real data life data that gets intergrated.
 
+Additional Project Files
 
-
+The repository also includes a files folder containing the supporting material from the earlier stages of the project along with the ERD diagram.
 

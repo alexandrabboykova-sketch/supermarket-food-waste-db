@@ -38,7 +38,7 @@ ORDER BY total_food_wasted DESC;
 
 SELECT
     category.category_name AS category,
-    SUM(food_waste.quantity_wasted) AS food_wasted
+    SUM(food_waste.quantity_wasted) AS amount_food_wasted
 FROM category
 JOIN product
     ON category.category_id = product.category_id

@@ -5,7 +5,6 @@ USE foodwaste;
 -- shelf life in days
 -- price / kg found on the official albert Heijn site Albert Heijn (n.d.).
 
-
 INSERT INTO supermarket (supermarket_id, name, country) VALUES
   (10, 'Swedish supermarket 1 (6 supermarkets)', 'Sweden');
 

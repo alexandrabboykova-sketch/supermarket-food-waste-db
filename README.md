@@ -133,8 +133,11 @@ All code was created and ran in dbeaver.
 To try it out highlight each section and press run.
 
 1 `schema.sql` - creates the database structure.
+
 2 `data.sql` - populates the database with mock data.
+
 3 `queries.sql` - runs database operations and analysis queries.
+
 4 ⁠ real_data.sql ⁠ + ⁠ real_data2.sql ⁠ - runs the real data life data that gets intergrated.
 
 Additional Project Files

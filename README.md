@@ -137,14 +137,14 @@ FOR MOCK DATA:
 
 1 `schema.sql` - creates the database structure.
 2 `data.sql` - populates the database with mock data.
-5 `queries.sql` - runs database operations and analysis queries.
+3 `queries.sql` - runs database operations and analysis queries.
 
 FOR REAL DATA:
 
 1 `schema.sql` - creates the database structure.
 2 `schema_changes` - changes the schema for the real data.
 3 `real_data.sql` + `real_data2.sql` - runs the real data life data that gets intergrated. 
-5 `queries.sql` - runs database operations and analysis queries.
+4 `queries.sql` - runs database operations and analysis queries.
 
 ## Additional Project Files
 

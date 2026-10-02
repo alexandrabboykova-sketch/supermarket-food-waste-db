@@ -106,8 +106,6 @@ INSERT INTO product (product_id, name, price, shelf_life, category_id, supplier_
 (107, 'Brussels sprout', 4.00, 7, 2, 2),
 (108, 'Sweet corn', 3.50, 5, 2, 2);
 
-
-
 INSERT INTO food_waste (waste_id, supermarket_id, product_id, disposal_method_id, quantity_wasted, unit, period_start, period_end, reason) VALUES
 (21, 6, 13, 2, 77.10, 'kg', '2022-11-19', '2022-11-26', NULL),
 (22, 6, 14, 2, 16.90, 'kg', '2022-11-19', '2022-11-26', NULL),

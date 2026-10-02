@@ -1,37 +1,41 @@
 USE foodwaste;
 
 -- Database C: Mattias, et. al. (2012). Swedish markets - in store waste (tons converted to kgs)
+-- tamarillo https://www.researchgate.net/publication/267098364_Postharvest_behavior_of_tamarillo_Solanum_betaceum_Cav_treated_with_CaCl2_under_different_storage_temperatures - taking the largest value!
+-- shelf life in days! 
+-- price / kg found on the official albert Heijn site https://www.ah.nl/ .
+
 
 INSERT INTO supermarket (supermarket_id, name, country) VALUES
   (10, NULL, 'Sweden');
 
 INSERT INTO product (product_id, name, price, shelf_life, category_id, supplier_id) VALUES
-(109, 'Sweet pepper', NULL, NULL, 2, NULL),
-(110, 'Tamarillo', NULL, NULL, 1, NULL),
-(111, 'Redcurrant', NULL, NULL, 1, NULL),
-(112, 'Pepino', NULL, NULL, 1, NULL),
-(113, 'Prickly pear', NULL, NULL, 1, NULL),
-(114, 'Oyster mushroom', NULL, NULL, 2, NULL),
-(115, 'Rambutan', NULL, NULL, 1, NULL);
+(109, 'Sweet pepper', 3, 12, 2, 1),
+(110, 'Tamarillo', 20, 4, 1, 1),
+(111, 'Redcurrant', 12.63, 14, 1, 1),
+(112, 'Pepino', 5, 28, 1, 1),
+(113, 'Prickly pear', 3, 1.74, 1, 1),
+(114, 'Oyster mushroom', 15, 7, 2, 1),
+(115, 'Rambutan', 20, 5, 1, 1);
 
 INSERT INTO food_waste (waste_id, supermarket_id, product_id, disposal_method_id, quantity_wasted, unit, period_start, period_end, reason) VALUES
-  (233, 10, 29, NULL, 10000.00, 'kg', NULL, NULL, NULL), 
-  (234, 10, 65, NULL, 7310.00, 'kg', NULL, NULL, NULL), 
-  (235, 10, 25, NULL, 6750.00, 'kg', NULL, NULL, NULL), 
-  (236, 10, 109, NULL, 5370.00, 'kg', NULL, NULL, NULL), 
-  (237, 10, 45, NULL, 4500.00, 'kg', NULL, NULL, NULL), 
-  (238, 10, 13, NULL, 4370.00, 'kg', NULL, NULL, NULL), 
-  (239, 10, 21, NULL, 3780.00, 'kg', NULL, NULL, NULL), 
-  (240, 10, 33, NULL, 3740.00, 'kg', NULL, NULL, NULL), 
-  (241, 10, 38, NULL, 3660.00, 'kg', NULL, NULL, NULL), 
-  (242, 10, 61, NULL, 3060.00, 'kg', NULL, NULL, NULL), 
-  (243, 10, 110, NULL, 57.50, 'kg', NULL, NULL, NULL), 
-  (244, 10, 86, NULL, 10.40, 'kg', NULL, NULL, NULL), 
-  (245, 10, 111, NULL, 52.60, 'kg', NULL, NULL, NULL), 
-  (246, 10, 112, NULL, 12.30, 'kg', NULL, NULL, NULL), 
-  (247, 10, 113, NULL, 123.00, 'kg', NULL, NULL, NULL), 
-  (248, 10, 114, NULL, 199.00, 'kg', NULL, NULL, NULL), 
-  (249, 10, 81, NULL, 179.00, 'kg', NULL, NULL, NULL), 
-  (250, 10, 115, NULL, 8.57, 'kg', NULL, NULL, NULL), 
-  (251, 10, 84, NULL, 228.00, 'kg', NULL, NULL, NULL), 
-  (252, 10, 57, NULL, 117.00, 'kg', NULL, NULL, NULL);
+  (233, 10, 29, 1, 10000.00, 'kg', NULL, NULL, NULL), 
+  (234, 10, 65, 1, 7310.00, 'kg', NULL, NULL, NULL), 
+  (235, 10, 25, 1, 6750.00, 'kg', NULL, NULL, NULL), 
+  (236, 10, 109, 1, 5370.00, 'kg', NULL, NULL, NULL), 
+  (237, 10, 45, 1, 4500.00, 'kg', NULL, NULL, NULL), 
+  (238, 10, 13, 1, 4370.00, 'kg', NULL, NULL, NULL), 
+  (239, 10, 21, 1, 3780.00, 'kg', NULL, NULL, NULL), 
+  (240, 10, 33, 1, 3740.00, 'kg', NULL, NULL, NULL), 
+  (241, 10, 38, 1, 3660.00, 'kg', NULL, NULL, NULL), 
+  (242, 10, 61, 1, 3060.00, 'kg', NULL, NULL, NULL), 
+  (243, 10, 110, 1, 57.50, 'kg', NULL, NULL, NULL), 
+  (244, 10, 86, 1, 10.40, 'kg', NULL, NULL, NULL), 
+  (245, 10, 111, 1, 52.60, 'kg', NULL, NULL, NULL), 
+  (246, 10, 112, 1, 12.30, 'kg', NULL, NULL, NULL), 
+  (247, 10, 113, 1, 123.00, 'kg', NULL, NULL, NULL), 
+  (248, 10, 114, 1, 199.00, 'kg', NULL, NULL, NULL), 
+  (249, 10, 81, 1, 179.00, 'kg', NULL, NULL, NULL), 
+  (250, 10, 115, 1, 8.57, 'kg', NULL, NULL, NULL), 
+  (251, 10, 84, 1, 228.00, 'kg', NULL, NULL, NULL), 
+  (252, 10, 57, 1, 117.00, 'kg', NULL, NULL, NULL);

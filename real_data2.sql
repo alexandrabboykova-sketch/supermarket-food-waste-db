@@ -10,13 +10,13 @@ INSERT INTO supermarket (supermarket_id, name, country) VALUES
   (10, NULL, 'Sweden');
 
 INSERT INTO product (product_id, name, price, shelf_life, category_id, supplier_id) VALUES
-(109, 'Sweet pepper', 3, 12, 2, 1),
-(110, 'Tamarillo', 20, 4, 1, 1),
+(109, 'Sweet pepper', 3.00, 12, 2, 1),
+(110, 'Tamarillo', 20.00, 4, 1, 1),
 (111, 'Redcurrant', 12.63, 14, 1, 1),
-(112, 'Pepino', 5, 28, 1, 1),
-(113, 'Prickly pear', 3, 1.74, 1, 1),
-(114, 'Oyster mushroom', 15, 7, 2, 1),
-(115, 'Rambutan', 20, 5, 1, 1);
+(112, 'Pepino', 5.00, 28, 1, 1),
+(113, 'Prickly pear', 3.00, 1.74, 1, 1),
+(114, 'Oyster mushroom', 15.00, 7, 2, 1),
+(115, 'Rambutan', 20.00, 5, 1, 1);
 
 INSERT INTO food_waste (waste_id, supermarket_id, product_id, disposal_method_id, quantity_wasted, unit, period_start, period_end, reason) VALUES
   (233, 10, 29, 1, 10000.00, 'kg', '2010-10-1', '2010-10-31', 'rejected at delivery and in-store waste'), 

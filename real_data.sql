@@ -2,16 +2,12 @@ USE foodwaste;
 -- Dataset A: Marangoni et al. (2026), Brazilian supermarkets, kg per store per week
 -- Dataset B: Buzby et al. (2015), US supermarkets, uneaten whole produce 2012 (million lbs converted to kg)
 
-INSERT INTO supermarket 
-(supermarket_id, name, country)
-VALUES
+INSERT INTO supermarket (supermarket_id, name, country) VALUES
 (6, 'Brazil Store 1', 'Brazil'),
 (7, 'Brazil Store 2', 'Brazil'),
 (8, 'Brazil Store 3', 'Brazil'),
 (9, 'US supermarkets (national total)', 'United States');
 
--- The actual datasets we found lack a lot of attributes we've set for our database thats 
--- why we have a lot of nulls 
 INSERT INTO product (product_id, name, price, shelf_life, category_id, supplier_id) VALUES
 (13, 'Banana', NULL, NULL, 1, NULL),
 (14, 'Plum', NULL, NULL, 1, NULL),

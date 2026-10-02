@@ -24,8 +24,7 @@ WHERE inventory_id = 26;
 DELETE FROM product
 WHERE product_id = 13;
 
--- all queries still work the same 
--- still follows 3nf 
+
 SELECT
     supermarket.name AS supermarket_name,
     SUM(food_waste.quantity_wasted) AS total_food_wasted

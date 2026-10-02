@@ -3,7 +3,7 @@ USE foodwaste;
 
 CREATE TABLE supplier (
     supplier_id INT PRIMARY KEY,
-    name VARCHAR(100),
+    name VARCHAR(100) NOT NULL,
     email VARCHAR(100),
     phone_number VARCHAR(20)
 );
@@ -31,8 +31,8 @@ CREATE TABLE disposal_method (
 CREATE TABLE product (
     product_id INT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    price DECIMAL(7,2), -- removed the not null due to actual data not providing price 
-    shelf_life INT, -- again no real data provde it 
+    price DECIMAL(7,2) NOT NULL,
+    shelf_life INT NOT NULL,
     category_id INT NOT NULL,
     supplier_id INT NOT NULL,
 

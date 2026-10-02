@@ -42,18 +42,18 @@ VALUES
 INSERT INTO product
 (product_id, name, price, shelf_life, category_id, supplier_id)
 VALUES
-(1, 'Red Apples ', 2.49, 14, 1, 1),
-(2, 'Bananas', 1.79, 7, 1, 1),
-(3, 'Carrots', 1.29, 21, 2, 4),
-(4, 'Tomatoes', 2.19, 10, 2, 4),
-(5, 'Whole Milk', 1.39, 10, 3, 2),
-(6, 'Greek Yogurt', 2.49, 14, 3, 2),
+(1, 'Red Apples 1kg', 2.49, 14, 1, 1),
+(2, 'Bananas 1kg', 1.79, 7, 1, 1),
+(3, 'Carrots 1kg', 1.29, 21, 2, 4),
+(4, 'Tomatoes 500g', 2.19, 10, 2, 4),
+(5, 'Whole Milk 1L', 1.39, 10, 3, 2),
+(6, 'Greek Yogurt 500g', 2.49, 14, 3, 2),
 (7, 'White Bread', 1.99, 5, 4, 5),
-(8, 'Croissants', 2.79, 4, 4, 5),
-(9, 'Chicken Breast', 6.99, 5, 5, 6),
-(10, 'Orange Juice', 2.29, 30, 6, 3),
-(11, 'Frozen Peas', 2.49, 365, 7, 3),
-(12, 'Penne Pasta', 1.19, 730, 8, 3);
+(8, 'Croissants 4-pack', 2.79, 4, 4, 5),
+(9, 'Chicken Breast 500g', 6.99, 5, 5, 6),
+(10, 'Orange Juice 1L', 2.29, 30, 6, 3),
+(11, 'Frozen Peas 750g', 2.49, 365, 7, 3),
+(12, 'Penne Pasta 500g', 1.19, 730, 8, 3);
 
 INSERT INTO inventory
 (inventory_id, supermarket_id, product_id, quantity, expiration_date)

@@ -9,9 +9,9 @@ ALTER TABLE product
 ALTER TABLE food_waste
     MODIFY disposal_method_id INT NULL,
     MODIFY quantity_wasted DECIMAL (15,2) NOT NULL,
-    CHANGE date period_start DATE NULL,
-    ADD period_end DATE NULL, -- changed the not null due to the swedish dataset not providing 
+    CHANGE date period_start DATE NOT NULL,
+    ADD period_end DATE NULL,
     ADD unit VARCHAR(10) NOT NULL DEFAULT 'item';
 
-UPDATE food_waste SET period_end = period_start;
+    UPDATE food_waste SET period_end = period_start;
 

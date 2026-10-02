@@ -140,7 +140,7 @@ To try it out highlight each section and press run.
 
 4 ⁠ real_data.sql ⁠ + ⁠ real_data2.sql ⁠ - runs the real data life data that gets intergrated.
 
-##Additional Project Files
+## Additional Project Files
 
 The repository also includes a files folder containing the supporting material from the earlier stages of the project along with the ERD diagram.
 

@@ -1,0 +1,56 @@
+category ,Fresh fruit,"U.S. Retail Weight, per capita (Lbs./year)","U.S. Retail Weight, total * (Million lbs./year)",Shrink in 2011 (%),Shrink in 2012 (%),Average shrink 2011–2012 (%),Uneaten Whole Fresh Fruit (Million lbs./year),Nonedible Share (%),Fruit Loss (edible) ** (Million Lbs./year)
+fruit,Papayas,0.9,288,54.8,30.3,43.1,124,33,83
+fruit,Pineapple,6.1,"1,917",30.5,35.8,32.2,617,49,315
+fruit,Apricots,0.1,29,39.0,28.9,30.0,9,7.0,8
+fruit,Watermelon,13.3,"4,187",23.3,27.7,25.4,"1,063",48,553
+fruit,Honeydew,1.4,444,33.8,18.5,22.5,100,54,46
+fruit,Mangoes,2.4,743,22.8,20.8,21.1,157,31,108
+fruit,Apples,15.5,"4,856",20.0,19.2,19.2,932,10,839
+fruit,Avocados,5.0,"1,578",25.0,17.2,19.0,300,26,222
+fruit,Grapefruit,2.3,723,25.2,14.6,18.8,136,50,68
+fruit,Cantaloupe,7.0,"2,196",18.4,17.9,18.2,400,49,204
+fruit,Peaches,3.7,"1,171",13.8,18.8,15.6,183,7,170
+fruit,Plums,0.6,186,16.4,13.6,15.1,28,6,26
+fruit,Oranges,10.4,"3,261",13.1,15.4,14.8,483,27,352
+fruit,Kiwi,0.5,156,16.4,13.1,14.7,23,14,20
+fruit,Pears,2.7,843,12.8,16.7,14.7,124,10,112
+fruit,Tangerines,3.8,"1,192",16.9,14.3,14.7,175,26,130
+fruit,Strawberries,7.2,"2,266",16.4,12.5,14.2,322,6,302
+fruit,Limes,2.4,763,14.5,13.9,14.0,107,16,90
+fruit,Cranberries,0.1,20,12.4,12.7,12.7,3,2,3
+fruit,Cherries,1.4,435,8.0,10.3,10.3,45,9,41
+fruit,Blueberries,1.2,387,8.3,9.9,8.9,34,5,33
+fruit,Grapes,7.2,"2,251",9.4,7.1,8.7,196,4,188
+fruit,Lemons,3.7,"1,151",8.3,4.9,5.1,59,47,31
+fruit,Bananas,25.4,"7,983",4.1,4.1,4.1,327,36,209
+vegetable,Turnip greens,0.4,113,61.7,63.9,62.9,71,30,50
+vegetable,Mustard greens,0.4,124,60.4,61.6,61.1,76,7,70
+vegetable,Escarole/endive,0.3,84,47.9,47.1,47.4,40,14,34
+vegetable,Collard greens,0.8,266,42.5,44.2,43.8,117,43,66
+vegetable,Okra,0.4,121,35.6,53.5,40.2,49,14,42
+vegetable,Kale,0.3,105,30.7,24.2,26.6,28,39,17
+vegetable,Squash,4.3,"1,338",24.0,22.9,23.1,309,17,256
+vegetable,Radishes,0.4,128,17.9,27.2,22.7,29,10,26
+vegetable,Snap beans,1.8,581,19.2,23.9,21.9,127,12,112
+vegetable,Artichokes,1.4,433,14.4,30.9,20.8,90,60,36
+vegetable,Eggplant,0.8,248,18.1,22.9,20.6,51,19,41
+vegetable,Romaine and leaf lettuce,10.7,"3,373",18.4,21.0,20.2,681,21,540
+vegetable,Spinach,1.4,428,15.1,20.2,18.2,78,28,56
+vegetable,Pumpkins,4.7,"1,486",16.5,21.9,18.0,267,30,187
+vegetable,Cauliflower,1.1,340,17.5,17.3,17.3,59,61,23
+vegetable,Mushrooms,2.6,817,19.7,16.5,17.3,141,3,137
+vegetable,Asparagus,1.3,413,12.3,17.0,15.8,65,47,35
+vegetable,Tomatoes,17.3,"5,451",11.9,14.7,14.5,790,9,719
+vegetable,Cucumbers,7.1,"2,225",12.2,12.1,12.2,271,27,198
+vegetable,Bell peppers,10.7,"3,375",8.2,11.3,10.7,361,18,296
+vegetable,Celery,5.5,"1,741",6.3,10.0,8.5,148,11,132
+vegetable,Head lettuce,13.2,"4,158",9.0,6.4,8.3,345,16,290
+vegetable,Potatoes,34.1,"10,715",7.3,8.9,8.3,889,10,800
+vegetable,Cabbage,6.3,"1,968",7.0,7.9,7.4,146,20,117
+vegetable,Carrots,7.6,"2,384",6.3,8.7,7.2,172,11,153
+vegetable,Broccoli,5.8,"1,822",7.0,6.5,6.7,122,39,74
+vegetable,Onions,18.6,"5,857",5.3,8.8,6.5,381,10,343
+vegetable,Brussels sprouts,0.3,109,6.1,5.6,5.8,6,10,6
+vegetable,Garlic,1.9,584,1.7,6.1,5.1,30,13,26
+vegetable,Sweet potatoes,6.2,"1,948",5.3,4.3,4.4,86,28,62
+vegetable,Sweet corn,9.0,"2,828",2.3,2.1,2.2,62,64,22

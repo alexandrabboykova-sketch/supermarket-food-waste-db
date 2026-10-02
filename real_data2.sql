@@ -7,7 +7,7 @@ USE foodwaste;
 
 
 INSERT INTO supermarket (supermarket_id, name, country) VALUES
-  (10, NULL, 'Sweden');
+  (10, 'Swedish supermarket 1 (6 supermarkets)', 'Sweden');
 
 INSERT INTO product (product_id, name, price, shelf_life, category_id, supplier_id) VALUES
 (109, 'Sweet pepper', 3.00, 12, 2, 1),

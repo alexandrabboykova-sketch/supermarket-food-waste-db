@@ -94,3 +94,30 @@ JOIN supermarket
     ON inventory.supermarket_id = supermarket.supermarket_id
 WHERE inventory.expiration_date < CURRENT_DATE
 ORDER BY inventory.expiration_date ASC;
+
+-- Query 6 -> Food waste per supplier - Aleksandra
+--This query shows which supplier's products are wasted the most, which could be
+-- useful to reduce food waste b/c maybe some suppliers have better packaging or make smaller deliveries.
+SELECT
+    supplier.name AS supplier,
+    SUM(food_waste.quantity_wasted) AS total_food_wasted
+FROM supplier
+JOIN product
+    ON supplier.supplier_id = product.supplier_id
+JOIN food_waste
+    ON product.product_id = food_waste.product_id
+GROUP BY supplier.supplier_id, supplier.name
+ORDER BY total_food_wasted DESC;
+
+-- Query 7 -> What happens to wasted food - Aleksandra
+-- This query shows how is wasted food disposed of, and how much food goes
+-- to each disposal method
+
+SELECT
+    disposal_method.method_name AS disposal_method,
+    SUM(food_waste.quantity_wasted) AS total_food_wasted
+FROM disposal_method
+JOIN food_waste
+    ON disposal_method.disposal_method_id = food_waste.disposal_method_id
+GROUP BY disposal_method.disposal_method_id, disposal_method.method_name
+ORDER BY total_food_wasted DESC;

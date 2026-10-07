@@ -25,6 +25,10 @@ DELETE FROM product
 WHERE product_id = 13;
 
 
+SELECT *
+FROM food_waste
+WHERE supermarket_id IN (6, 7, 8, 9);
+
 SELECT
     supermarket.name AS supermarket_name,
     SUM(food_waste.quantity_wasted) AS total_food_wasted
@@ -58,3 +62,35 @@ JOIN food_waste
     ON product.product_id = food_waste.product_id
 WHERE food_waste.reason = 'Expired'
 ORDER BY food_waste.quantity_wasted DESC;
+
+-- Query 4 - Main Reasons for Food Waste -Despina 
+-- This query shows the main reasons why food waste is recorded.
+-- It groups the results by waste reason and unit so that
+-- different measurement units are not combined.
+
+SELECT
+    food_waste.reason AS waste_reason,
+    food_waste.unit AS unit,
+    COUNT(*) AS number_of_records,
+    SUM(food_waste.quantity_wasted) AS total_food_wasted
+FROM food_waste
+WHERE food_waste.reason IS NOT NULL
+GROUP BY food_waste.reason, food_waste.unit
+ORDER BY total_food_wasted DESC;
+
+-- Query 5 - Products at Risk of Food Waste -Despina 
+-- This query identifies products in supermarket inventory
+-- whose expiration date has already passed.
+
+SELECT
+    supermarket.name AS supermarket_name,
+    product.name AS product,
+    inventory.quantity AS quantity,
+    inventory.expiration_date AS expiration_date
+FROM inventory
+JOIN product
+    ON inventory.product_id = product.product_id
+JOIN supermarket
+    ON inventory.supermarket_id = supermarket.supermarket_id
+WHERE inventory.expiration_date < CURRENT_DATE
+ORDER BY inventory.expiration_date ASC;

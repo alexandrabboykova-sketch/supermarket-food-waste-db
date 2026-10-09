@@ -176,6 +176,8 @@ Upon adding in our real life data there were no normalisation issues found.
 
 The only change we added was removing 'units', this is as we had taken the data and made sure that it was all the same unit (eg. kg).
 
+More information of this can be found under Files --> Week5_IntegrationRWD (Integration of Real World Data). In this file we discuss multiple factors like normalisation, and some limitations.
+
 ## Data used (References)
 
 For the real life data, the following articles/studies were used to obtain the csv files:
@@ -227,6 +229,8 @@ Overall, the general direction of the future work stays about the same as stated
 Previously, after our stakeholder video, the main factor moving forward hinged on the addition of real life data. This has been addressed in Week 5 - Integration of real data.
 
 Overall, our database assumes that one supplier has a one to many relationship with Products. This assumption therefore allows our database to be normalised. However, in reality, product has many suppliers (as a product can come from many different places). This would make the database more messy, and would require more junction tables to fix the many to many relationship.
+
+More limitations are noted in Week5_IntegrationRWD. 
 
 ## SQL Dump
 

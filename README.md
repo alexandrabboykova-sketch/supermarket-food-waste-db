@@ -159,6 +159,9 @@ The repository also includes a files folder containing the supporting material f
 https://github.com/user-attachments/assets/ec88a187-d4df-4767-9bfd-6a7f35e458e8
 
 ## Data used (References)
+
+### Article 1
+
 Authors: Mattias Eriksson, Ingrid Strid and Per-Anders Hansson
 
 Date: November 2012
@@ -169,6 +172,8 @@ File path: sources/Food losses in Six Swedish Retail Stores.pdf
 
 URL: https://doi.org/10.1016/j.resconrec.2012.08.001
 
+### Article 2
+
 Authors: Jean C. Buzby, Jeanine T. Bentley, Beth Padera, Cara Ammon, and Jennifer Campuzano
 
 Date: 4 August 2015
@@ -178,6 +183,8 @@ Description: This research uses shipment sales data from approximately 2,900 sto
 File path: sources/Estimated Fresh Produce Shrink and Food Loss.pdf
 
 URL: https://doi.org/10.3390/agriculture5030626
+
+### Article 3
 
 Author: Suzana Márcia Marangoni; Pedro Brancoli; Andréa Rossi Scalco
 

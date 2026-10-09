@@ -230,7 +230,7 @@ Previously, after our stakeholder video, the main factor moving forward hinged o
 
 Overall, our database assumes that one supplier has a one to many relationship with Products. This assumption therefore allows our database to be normalised. However, in reality, product has many suppliers (as a product can come from many different places). This would make the database more messy, and would require more junction tables to fix the many to many relationship.
 
-More limitations are noted in Week5_IntegrationRWD. 
+More limitations are noted in Week5_IntegrationRWD. These limitations would further be addressed through the process of finding more real data, however, this might be difficult as food_waste data is usually not counted nor publicly available. 
 
 ## SQL Dump
 

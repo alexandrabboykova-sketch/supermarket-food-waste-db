@@ -73,8 +73,9 @@ To try it out highlight each section and press run.
 
 1. `schema.sql` - creates the database structure.
 2. `schema_changes` - changes the schema for the real data.
-3. `data_Brazil_US.sql` + `data_Sweden.sql` - runs the real data life data that gets intergrated.
-4. `queries.sql` - runs database operations and analysis queries.
+3. `mock_data.sql` - so it knows which category it belongs to
+4. `data_Brazil_US.sql` + `data_Sweden.sql` - runs the real data life data that gets intergrated.
+5. `queries.sql` - runs database operations and analysis queries.
 
 ## Files
 

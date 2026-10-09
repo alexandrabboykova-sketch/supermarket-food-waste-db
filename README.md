@@ -98,10 +98,6 @@ The results are then ordered by the quantity wasted in descending order.
 
 These queries demonstrate the use of table joins, aggregation, grouping, filtering, and sorting to analyse the food waste data.
 
-### Query 8 - Products Wasted Due to Expiration
-
-### Query 9 - Products Wasted Due to Expiration
-
 ## Real-world data
 
 ### Data cleaning

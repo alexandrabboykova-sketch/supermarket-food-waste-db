@@ -22,3 +22,10 @@ ALTER TABLE food_waste
 UPDATE food_waste
 SET period_end = period_start
 WHERE period_end IS NULL;
+
+
+
+ALTER TABLE food_waste
+DROP COLUMN unit;
+
+

@@ -38,3 +38,5 @@ INSERT INTO food_waste (waste_id, supermarket_id, product_id, disposal_method_id
   (250, 10, 115, 1, 8.57, '2010-10-1', '2010-10-31', 'rejected at delivery and in-store waste'), 
   (251, 10, 84, 1, 228.00, '2010-10-1', '2010-10-31', 'rejected at delivery and in-store waste'), 
   (252, 10, 57, 1, 117.00, '2010-10-1', '2010-10-31', 'rejected at delivery and in-store waste');
+
+

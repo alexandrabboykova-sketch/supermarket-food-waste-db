@@ -8,6 +8,7 @@ INSERT INTO supermarket (supermarket_id, name, country) VALUES
 (8, 'Brazil Store 3', 'Brazil'),
 (9, 'US supermarkets (national total)', 'United States');
 
+
 INSERT INTO product (product_id, name, price, shelf_life, category_id, supplier_id) VALUES
 (13, 'Banana', 4.00, 7, 1, 2),
 (14, 'Plum', 6.20, 4, 1, 2),

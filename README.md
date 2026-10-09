@@ -12,117 +12,44 @@ The project demonstrates the use of SQL to create, populate, and interact with a
 
 The database consists of seven tables:
 
-1 `supplier` - Stores information about product suppliers.
-2 `category` - Stores product categories.
-3 `supermarket` - Stores information about supermarkets.
-4 `disposal_method` - Stores the different methods used to dispose of food waste.
-5 `product` - Stores information about products, including their price, shelf life, category, and supplier.
-6 `inventory` - Stores the products available at each supermarket, including quantity and expiration date.
-7 `food_waste` - Records products that have been wasted, including the supermarket, product, disposal method, quantity, date, and reason.
-
-
+1. `supplier` - Stores information about product suppliers.
+2. `category` - Stores product categories.
+3. `supermarket` - Stores information about supermarkets.
+4. `disposal_method` - Stores the different methods used to dispose of food waste.
+5. `product` - Stores information about products, including their price, shelf life, category, and supplier.
+6. `inventory` - Stores the products available at each supermarket, including quantity and expiration date.
+7. `food_waste` - Records products that have been wasted, including the supermarket, product, disposal method, quantity, date, and reason.
 
 The tables are connected using primary keys and foreign keys based on the project's ERD.
 
-## Files
+## Project Structure
 
-### `schema.sql`
+### Repository Breakdown
 
-Contains the SQL code used to create the `foodwaste` database and its tables.
-
-It defines:
-
-- Tables
-- Primary keys
-- Foreign keys
-- Data types
-- `NOT NULL` constraints
-
-### `data.sql`
-
-Contains realistic mock data used to populate the database.
-
-The data includes:
-
-- Suppliers
-- Categories
-- Supermarkets
-- Disposal methods
-- Products
-- Inventory records
-- Food waste records
-
-### `queries.sql`
-
-Contains SQL queries used to interact with the database.
-
-This includes basic database operations such as:
-
-- `INSERT` - adding data
-- `UPDATE` - updating existing data
-- `DELETE` - removing data
-
-Along with advanced SQl queries that were implemented to demonstrate the use of SQL for analysing the food waste database.
-
-### Query 1 - Food Waste by Supermarket
-
-This query calculates the total amount of food wasted by each supermarket.
-
-It uses:
-- `LEFT JOIN` to connect supermarkets with their food waste records.
-- `SUM()` to calculate the total quantity of food wasted.
-- `GROUP BY` to calculate the total separately for each supermarket.
-- `ORDER BY DESC` to display supermarkets from the highest amount of food waste to the lowest.
-
-### Query 2 - Food Waste by Category
-
-This query determines which product categories have the highest amount of food waste.
-
-It connects the `category`, `product`, and `food_waste` tables using `JOIN`.
-
-It uses:
-- `JOIN` to connect the related tables.
-- `SUM()` to calculate the total quantity wasted for each category.
-- `GROUP BY` to group the waste by category.
-- `ORDER BY DESC` to order the categories by total food waste.
-
-### Query 3 - Products Wasted Due to Expiration
-
-This query identifies products that were wasted because they expired.
-
-It connects the `product` and `food_waste` tables using `JOIN` and filters the results using.
-
-`WHERE food_waste.reason = 'Expired'`
-
-The results are then ordered by the quantity wasted in descending order.
-
-These queries demonstrate the use of table joins, aggregation, grouping, filtering, and sorting to analyse the food waste data.
-
-## Real-world data
-
-### Data cleaning
-
-- Missing data : Brazil has no empty cells. US had empty "Average" and "Total" rows, which we removed. 
-- Dates : Brazil mixes date format (first month, or first day). We changed them to year->month->day. The US only has years, so we used 2012.
-- Duplicates: "Pepper" appeared twice in Brazil Store 3, so we added them together.
-- Names: Some names differed, like "Banana" and "Bananas", so we made all names singular.
-- Extra: We convereted pounds to kg. Extra US columns like percentages were not used.
-
-### Schema changes for real data
-
-The real data did not fit some of our constraints, so we changed some of them:
-
-- Product price, shelf life and supplier can now be empty, because the datasets did not include them
-- Disposal method can be empty , because it is not reported in the datasets
-- Waste amount is now a decimal, because real data is in kg with decimals and large numbers
-- The single date turned into start and end date, because real data covers a week or a year
-- Added a unit column, because our sample data counts items, the real data uses kg
-
-Changes are in `schema_changes.sql` .
-
-Not all columns were used: from dataset B we only stored the total wasted amount
-  (converted to kg). Waste percentages, retail weight and non-edible share were left out
-  because our schema has no attributes for them.
+```text
+foodwaste/
+├── README.md
+├── Schema/
+│   ├── schema.sql
+│   └── schema_changes.sql
+├── Data/
+│   ├── data.sql
+│   ├── real_data.sql
+│   └── real_data2.sql
+├── Files/
+│   ├── ERD.jpeg
+│   ├── Week1_SocialChallange.pdf
+│   ├── Week2_Normalisation.pdf
+│   └── Week2_RWD.pdf
+├── Queries/
+│   └── queries.sql
+├── CSVFiles/
+│   ├── A_food_waste_data.csv
+│   ├── Food waste data - combined.csv
+│   └── food waste 2 - combined.csv
+└── Sources/
+    └── [PDF source documents]
+```
 
 ## How to Use
 
@@ -132,29 +59,118 @@ All code was created and ran in dbeaver.
 
 To try it out highlight each section and press run.
 
+### FOR MOCK DATA
 
-FOR MOCK DATA: 
+1. `schema.sql` - creates the database structure.
+2. `data.sql` - populates the database with mock data.
+3. `queries.sql` - runs database operations and analysis queries.
 
-1 `schema.sql` - creates the database structure.
-2 `data.sql` - populates the database with mock data.
-3 `queries.sql` - runs database operations and analysis queries.
+### FOR REAL DATA
 
-FOR REAL DATA:
+1. `schema.sql` - creates the database structure.
+2. `schema_changes` - changes the schema for the real data.
+3. `real_data.sql` + `real_data2.sql` - runs the real data life data that gets intergrated.
+4. `queries.sql` - runs database operations and analysis queries.
 
-1 `schema.sql` - creates the database structure.
-2 `schema_changes` - changes the schema for the real data.
-3 `real_data.sql` + `real_data2.sql` - runs the real data life data that gets intergrated. 
-4 `queries.sql` - runs database operations and analysis queries.
+## Files
 
-## Additional Project Files
+### `schema.sql`
 
-The repository also includes a files folder containing the supporting material from the earlier stages of the project along with the ERD diagram.
+Contains the SQL code used to create the `foodwaste` database and its tables.
 
-## Presentation Video
+It defines:
+
+* Tables
+* Primary keys
+* Foreign keys
+* Data types
+* `NOT NULL` constraints
+
+### `mock_data.sql`
+
+Contains realistic mock data used to populate the database.
+
+The data includes:
+
+* Suppliers
+* Categories
+* Supermarkets
+* Disposal methods
+* Products
+* Inventory records
+* Food waste records
+
+### `queries.sql`
+
+Contains SQL queries used to interact with the database.
+
+This includes basic database operations such as:
+
+* `INSERT` - adding data
+* `UPDATE` - updating existing data
+* `DELETE` - removing data
+
+Along with advanced SQL queries that were implemented to demonstrate the use of SQL for analysing the food waste database such as:
+
+* `JOIN ... ON ...` - combining data from multiple tables based on a matching condition
+* `GROUP BY` - grouping rows that share the same values for specified columns
+* `ORDER BY` - sorting query results in ascending or descending order
+
+All queries are further explained and broken down in queries.sql found in the Queries folder.
+
+A simple break down is found below:
+
+### Query Breakdown
+
+* `Query 1` - calculating and ranking the total food waste per supermarket
+* `Query 2` - identifying which food categories account for the highest amount of food waste
+* `Query 3` - identifying products wasted due to rejection at delivery and in-store waste
+* `Query 4` - identifying the main reasons for food waste and calculating the quantity wasted for each reason
+* `Query 5` - identifying inventory products whose expiration dates have passed
+* `Query 6` - estimating the financial loss caused by food waste at each supermarket
+* `Query 7` - analysing food waste quantities in relation to product shelf life
+* `Query 8` - identifying and ranking individual products that generate the most food waste
+* `Query 9` - calculating each supermarket's percentage contribution to total food waste and comparing the contribution of its country
+
+## Week 4 - Stakeholder video
 
 https://github.com/user-attachments/assets/ec88a187-d4df-4767-9bfd-6a7f35e458e8
 
+## Week 5 - Integration of real world data
+
+### Step 1: Data cleaning
+
+* Missing data : Brazil has no empty cells. US had empty "Average" and "Total" rows, which we removed. This is as they were not useful to the data. This was simply done by removing them in the CSV file.
+* Dates : Brazil mixes date format (first month, or first day). We changed them to year->month->day. This was specifically done so it is transferable to all countries. The US only has years, so we used 2012.
+* Duplicates: "Pepper" appeared twice in Brazil Store 3, so we added them together.
+* Names: Some names differed, like "Banana" and "Bananas", so we made all names singular. Again, we added these values together to create one unitary value.
+* Extra: We convereted pounds to kg. Extra US columns like percentages were not used.
+
+### Schema changes for real data
+
+The real data did not fit some of our constraints, so we changed some of them:
+
+* Product price, shelf life and supplier can now be empty, because the datasets did not include them
+* Disposal method can be empty , because it is not reported in the datasets
+* Waste amount is now a decimal, because real data is in kg with decimals and large numbers
+* The single date turned into start and end date, because real data covers a week or a year
+* Added a unit column, because our sample data counts items, the real data uses kg
+
+Changes are in `schema_changes.sql` .
+
+Not all columns were used: from dataset B we only stored the total wasted amount
+(converted to kg). Waste percentages, retail weight and non-edible share were left out
+because our schema has no attributes for them.
+
+## Normalisation
+
+Upon adding in our real life data there were no normalisation issues found.
+
+The only change we added was removing 'units', this is as we had taken the data and made sure that it was all the same unit (eg. kg).
+
 ## Data used (References)
+
+For the real life data, the following articles/studies were used to obtain the csv files:
 
 ### Article 1
 
@@ -164,7 +180,7 @@ Date: November 2012
 
 Description: This research investigates vegetable and fruit waste in 6 different Swedish supermarkets. The data distinguishes between pre-store waste, recorded in-store waste and unrecorded in-store waste - which is an estimate, alluding to the fact that supermarkets don't always probably record their waste.4.3% of fresh fruit where found to be wasted. This source supports the Swedish supermarket food-waste data used in the database.
 
-File path: sources/Food losses in Six Swedish Retail Stores.pdf 
+File path: sources/Food losses in Six Swedish Retail Stores.pdf
 
 URL: https://doi.org/10.1016/j.resconrec.2012.08.001
 
@@ -191,3 +207,16 @@ Description: This study includes primary data collection through a waste composi
 File path: sources/Enviromental Impacts Caused by Food Waste
 
 URL: https://doi.org/10.1016/j.clwas.2026.100468
+
+## Reflections and future work
+
+### Future works
+
+Overall, the general direction of the future work stays about the same as stated in the Week 4 stakeholder video: creating more factors that affect food waste. In general this means that we would like to create more similarly minded databases, but for other contributing factors of food waste such as: household waste. This would be specifically useful because then we would be able to document and follow a majority of the life cycle of food (such as from the seller to the household to what happens within that household).
+
+### Reflections
+
+Previously, after our stakeholder video, the main factor moving forward hinged on the addition of real life data. This has been addressed in Week 5 - Integration of real data.
+
+Overall, our database assumes that one supplier has a one to many relationship with Products. This assumption therefore allows our database to be normalised. However, in reality, product has many suppliers (as a product can come from many different places). This would make the database more messy, and would require more junction tables to fix the many to many relationship.
+

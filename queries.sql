@@ -134,27 +134,25 @@ JOIN food_waste
 GROUP BY product.product_id, product.name, food_waste.unit
 ORDER BY total_food_wasted DESC;
 
--- Query 9: Which Supermaket has the most waste relative to its inventory?: Anastasia V.
--- I want to calculate how what part of a supermarkets inventory is being wasted. 
--- This helps our research since it recognises that 1 supermarket may have a lot of waste merely because it has more products but they may waste less of their inventory than a small supermarket does.
--- Although a big amount of waste is not good, this query can reveal eg. an efficiency gap in supermarkets who are wasting too much food relative to their size. 
--- This could prove that smaller supermarkets with not alot of waste, have more food waste than they should. --> future help with goverment action, reforms etc.
-SELECT 
-    supermarket.name AS supermarket_name, 
-    waste.total_wasted,
-    inventory.total_inventory
-    waste.total_inventory, 
-    waste.total_wasted/inventory.total_inventory*100 AS waste_percentage
+-- Query 9: What is the percentage each supermarket is 
+-- contributing to the total recorded food waste?
+
+SELECT
+    supermarket.name AS supermarket_name,
+    SUM(food_waste.quantity_wasted) AS total_wasted_kg,
+    ROUND(
+        SUM(food_waste.quantity_wasted)*100 /
+        (
+            SELECT SUM(quantity_wasted)
+            FROM food_waste
+        ),
+        2) 
+	AS percentage_of_recorded_waste
 FROM supermarket
-JOIN (SELECT supermarket_id, SUM(quantity_wasted) AS total_wasted
-    FROM food_waste
-    GROUP BY supermarket_id
-    ) AS waste
-        ON supermarket.supermarket_id = waste.supermarket_id
-JOIN (SELECT supermarket_id, SUM(quantity) AS total_inventory
-    FROM inventory
-    GROUP BY supermarket_id
-    ) AS inventory
-ON supermarket.supermarket_id = inventory.supermarket_id
-ORDER BY total_food_wasted DESC;
-    
+JOIN food_waste
+    ON supermarket.supermarket_id = food_waste.supermarket_id
+WHERE food_waste.unit = 'kg'
+GROUP BY
+    supermarket.supermarket_id,
+    supermarket.name
+ORDER BY total_wasted_kg DESC;

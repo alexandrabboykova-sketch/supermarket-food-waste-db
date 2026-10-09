@@ -78,12 +78,11 @@ ORDER BY food_waste.quantity_wasted DESC;
 
 SELECT
     food_waste.reason AS waste_reason,
-    food_waste.unit AS unit,
     COUNT(*) AS number_of_records,
     SUM(food_waste.quantity_wasted) AS total_food_wasted
 FROM food_waste
 WHERE food_waste.reason IS NOT NULL
-GROUP BY food_waste.reason, food_waste.unit
+GROUP BY food_waste.reason
 ORDER BY total_food_wasted DESC;
 
 -- Query 5 - Products at Risk of Food Waste -Despina 
@@ -136,11 +135,10 @@ ORDER BY product.shelf_life ASC;
 SELECT 
     product.name AS product,
     SUM(food_waste.quantity_wasted) AS total_food_wasted, 
-    food_waste.unit AS unit
 FROM product
 JOIN food_waste
     ON product.product_id = food_waste.product_id
-GROUP BY product.product_id, product.name, food_waste.unit
+GROUP BY product.product_id, product.name
 ORDER BY total_food_wasted DESC;
 
 -- Query 9: What is the percentage each supermarket is 

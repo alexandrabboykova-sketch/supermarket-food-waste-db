@@ -75,8 +75,6 @@ ORDER BY food_waste.quantity_wasted DESC;
 
 -- Query 4 - Main Reasons for Food Waste -Despina 
 -- This query shows the main reasons why food waste is recorded.
--- It groups the results by waste reason and unit so that
--- different measurement units are not combined.
 
 SELECT
     food_waste.reason AS waste_reason,

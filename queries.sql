@@ -123,7 +123,8 @@ GROUP BY product.shelf_life
 ORDER BY product.shelf_life ASC;
 
 -- Query 8: Which individual products generate the highest amount of waste: Anastasia V.
--- Answering this question could help supermarkets target specific products and reduce the quantity ordered, reduce storage quantity, etc. in order to generate less waste.
+-- Answering this question could help supermarkets target specific products and reduce the quantity ordered,
+-- reduce storage quantity, etc. in order to generate less waste.
 SELECT 
     product.name AS product,
     SUM(food_waste.quantity_wasted) AS total_food_wasted, 
@@ -135,23 +136,39 @@ GROUP BY product.product_id, product.name, food_waste.unit
 ORDER BY total_food_wasted DESC;
 
 -- Query 9: What is the percentage each supermarket is 
--- contributing to the total recorded food waste?
+-- contributing to the total recorded food waste?: Anastasia V.
+-- This question is useful in creating a sense of responsibility and comparing global waste statistics.
 
 SELECT
     supermarket.name AS supermarket_name,
-    SUM(food_waste.quantity_wasted) AS total_wasted_kg,
+    SUM(food_waste.quantity_wasted) AS total_wasted,
     ROUND(
         SUM(food_waste.quantity_wasted)*100 /
         (   SELECT SUM(quantity_wasted)
             FROM food_waste
         ),
         2) 
-	AS percentage_of_recorded_waste
+	AS supermarket_waste_percentage,
+	ROUND(
+        (   SELECT SUM(fw.quantity_wasted)
+            FROM food_waste AS fw
+            JOIN supermarket AS sm
+                ON fw.supermarket_id = sm.supermarket_id
+            WHERE sm.country = supermarket.country
+        ) * 100.0/
+        (
+            SELECT SUM(quantity_wasted)
+            FROM food_waste
+        ),
+        2
+    ) AS country_waste_percentage
+	
 FROM supermarket
 JOIN food_waste
     ON supermarket.supermarket_id = food_waste.supermarket_id
-WHERE food_waste.unit = 'kg'
+
 GROUP BY
     supermarket.supermarket_id,
-    supermarket.name
-ORDER BY total_wasted_kg DESC;
+    supermarket.name,
+	supermarket.country
+ORDER BY total_wasted DESC;

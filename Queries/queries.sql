@@ -134,7 +134,7 @@ ORDER BY product.shelf_life ASC;
 -- reduce storage quantity, etc. in order to generate less waste.
 SELECT 
     product.name AS product,
-    SUM(food_waste.quantity_wasted) AS total_food_wasted, 
+    SUM(food_waste.quantity_wasted) AS total_food_wasted
 FROM product
 JOIN food_waste
     ON product.product_id = food_waste.product_id

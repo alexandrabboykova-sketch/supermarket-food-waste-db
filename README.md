@@ -160,20 +160,31 @@ https://github.com/user-attachments/assets/ec88a187-d4df-4767-9bfd-6a7f35e458e8
 
 ## Data used (References)
 Authors: Mattias Eriksson, Ingrid Strid and Per-Anders Hansson
+
 Date: November 2012
-Description:
-This research investigates vegetable and fruit waste in 6 different Swedish supermarkets. The data distinguishes between pre-store waste, recorded in-store waste and unrecorded in-store waste - which is an estimate, alluding to the fact that supermarkets don't always probably record their waste.4.3% of fresh fruit where found to be wasted. This source supports the Swedish supermarket food-waste data used in the database.
-File path: sources/Food losses in six Swedish retail stores.pdf
+
+Description: This research investigates vegetable and fruit waste in 6 different Swedish supermarkets. The data distinguishes between pre-store waste, recorded in-store waste and unrecorded in-store waste - which is an estimate, alluding to the fact that supermarkets don't always probably record their waste.4.3% of fresh fruit where found to be wasted. This source supports the Swedish supermarket food-waste data used in the database.
+
+File path: sources/Food losses in Six Swedish Retail Stores.pdf 
+
 URL: https://doi.org/10.1016/j.resconrec.2012.08.001
 
 Authors: Jean C. Buzby, Jeanine T. Bentley, Beth Padera, Cara Ammon, and Jennifer Campuzano
+
 Date: 4 August 2015
+
 Description: This research uses shipment sales data from approximately 2,900 stores. It covers 24 types of fruit and 31 types of vegetables, using data from 2011–2012. The study provides estimates of retail food loss, making it a useful reference for understanding differences in food waste between products.
-File path: sources/Estimated Fresh Produce Shrink and Food Loss U.S. Supermarkets.pdf
+
+File path: sources/Estimated Fresh Produce Shrink and Food Loss.pdf
+
 URL: https://doi.org/10.3390/agriculture5030626
 
 Author: Suzana Márcia Marangoni; Pedro Brancoli; Andréa Rossi Scalco
+
 DATE: March 2026
+
 Description: This study includes primary data collection through a waste composition analysis. Three supermarkets where looked at for seven days and researchers sorted, categorized, and weighed unsold fruit and vegetables. The study also estimated greenhouse gas emissions using the life cycle assessment. The study included individual product names and waste quantities in kgs.
-File path: sources/Enviromental impacts cause by food waste
+
+File path: sources/Enviromental Impacts Caused by Food Waste
+
 URL: https://doi.org/10.1016/j.clwas.2026.100468

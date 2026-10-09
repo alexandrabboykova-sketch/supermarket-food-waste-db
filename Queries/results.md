@@ -215,4 +215,4 @@ This is as no real data was found with experied. Primarily works with mock data.
 
 ## Analysis caveat
 
-The US row is a national annual total, the Swedish row is one month for six stores, and the Brazil rows are one week for a single store. The US figure therefore swamps everything else, which is why Query 9 rounds every other row to 0.00%. The Query 7 shelf-life buckets are dominated by the US data for the same reason. If your report compares countries, normalise by period or store count, or at least mention this.
+The US row is a national annual total, the Swedish row is one month for six stores, and the Brazil rows are one week for a single store. The US figure therefore swamps everything else, which is why Query 9 rounds every other row to 0.00%. The Query 7 shelf-life buckets are dominated by the US data for the same reason. These must be mentioned alongside Query 5 which is empty as no real data is flagged as experied.

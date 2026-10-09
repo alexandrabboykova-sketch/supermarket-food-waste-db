@@ -33,9 +33,9 @@ foodwaste/
 │   ├── schema.sql
 │   └── schema_changes.sql
 ├── Data/
-│   ├── data.sql
-│   ├── real_data.sql
-│   └── real_data2.sql
+│   ├── mock_data.sql
+│   ├── data_Brazil_US.sql
+│   └── data_Sweden.sql
 ├── Files/
 │   ├── ERD.jpeg
 │   ├── Week1_SocialChallange.pdf
@@ -62,14 +62,14 @@ To try it out highlight each section and press run.
 ### FOR MOCK DATA
 
 1. `schema.sql` - creates the database structure.
-2. `data.sql` - populates the database with mock data.
+2. `mock_data.sql` - populates the database with mock data.
 3. `queries.sql` - runs database operations and analysis queries.
 
 ### FOR REAL DATA
 
 1. `schema.sql` - creates the database structure.
 2. `schema_changes` - changes the schema for the real data.
-3. `real_data.sql` + `real_data2.sql` - runs the real data life data that gets intergrated.
+3. `data_Brazil_US.sql` + `data_Sweden.sql` - runs the real data life data that gets intergrated.
 4. `queries.sql` - runs database operations and analysis queries.
 
 ## Files

@@ -95,32 +95,32 @@ JOIN supermarket
 WHERE inventory.expiration_date < CURRENT_DATE
 ORDER BY inventory.expiration_date ASC;
 
--- Query 6 -> Food waste per supplier - Aleksandra
---This query shows which supplier's products are wasted the most, which could be
--- useful to reduce food waste b/c maybe some suppliers have better packaging or make smaller deliveries.
+-- Query 6 -> money lost per supermarket b/c of food waste - Aleksandra
+-- This query shows how much money is lost due to food waste in euros
 SELECT
-    supplier.name AS supplier,
-    SUM(food_waste.quantity_wasted) AS total_food_wasted
-FROM supplier
+    supermarket.name AS supermarket_name,
+    supermarket.country AS country,
+    SUM(product.price * food_waste.quantity_wasted) AS money_lost
+FROM supermarket
+JOIN food_waste
+    ON supermarket.supermarket_id = food_waste.supermarket_id
 JOIN product
-    ON supplier.supplier_id = product.supplier_id
+    ON product.product_id =  food_waste.product_id
+GROUP BY supermarket.supermarket_id, supermarket.name, supermarket.country
+ORDER BY money_lost DESC;
+
+-- Query 7 -> Food waste by shelf life - Aleksandra
+-- This query shows if products with shorter shelf life are wasted more
+
+SELECT
+    product.shelf_life AS shelf_life_days,
+    COUNT(*) AS number_of_waste_records,
+    SUM(food_waste.quantity_wasted) AS total_food_wasted
+FROM product
 JOIN food_waste
     ON product.product_id = food_waste.product_id
-GROUP BY supplier.supplier_id, supplier.name
-ORDER BY total_food_wasted DESC;
-
--- Query 7 -> What happens to wasted food - Aleksandra
--- This query shows how is wasted food disposed of, and how much food goes
--- to each disposal method
-
-SELECT
-    disposal_method.method_name AS disposal_method,
-    SUM(food_waste.quantity_wasted) AS total_food_wasted
-FROM disposal_method
-JOIN food_waste
-    ON disposal_method.disposal_method_id = food_waste.disposal_method_id
-GROUP BY disposal_method.disposal_method_id, disposal_method.method_name
-ORDER BY total_food_wasted DESC;
+GROUP BY product.shelf_life
+ORDER BY product.shelf_life ASC;
 
 -- Query 8: Which individual products generate the highest amount of waste: Anastasia V.
 -- Answering this question could help supermarkets target specific products and reduce the quantity ordered, reduce storage quantity, etc. in order to generate less waste.

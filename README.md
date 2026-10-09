@@ -43,12 +43,16 @@ foodwaste/
 │   └── Week2_RWD.pdf
 ├── Queries/
 │   └── queries.sql
+│   └── results.sql
 ├── CSVFiles/
 │   ├── A_food_waste_data.csv
 │   ├── Food waste data - combined.csv
 │   └── food waste 2 - combined.csv
+├── Dump/
+│   └── foodwaste_food_dump.sql
 └── Sources/
     └── [PDF source documents]
+
 ```
 
 ## How to Use
@@ -74,7 +78,7 @@ To try it out highlight each section and press run.
 
 ## Files
 
-### `schema.sql`
+### `schema.sql` and `schema_changes.sql`
 
 Contains the SQL code used to create the `foodwaste` database and its tables.
 
@@ -131,6 +135,10 @@ A simple break down is found below:
 * `Query 7` - analysing food waste quantities in relation to product shelf life
 * `Query 8` - identifying and ranking individual products that generate the most food waste
 * `Query 9` - calculating each supermarket's percentage contribution to total food waste and comparing the contribution of its country
+
+### `data_Brazil_US.sql` and `data_Sweden.sql`
+
+Contains realistic real data used to populate the database. With sources found in section Week 5 - Integration --> Data Used (References). 
 
 ## Week 4 - Stakeholder video
 
@@ -219,4 +227,8 @@ Overall, the general direction of the future work stays about the same as stated
 Previously, after our stakeholder video, the main factor moving forward hinged on the addition of real life data. This has been addressed in Week 5 - Integration of real data.
 
 Overall, our database assumes that one supplier has a one to many relationship with Products. This assumption therefore allows our database to be normalised. However, in reality, product has many suppliers (as a product can come from many different places). This would make the database more messy, and would require more junction tables to fix the many to many relationship.
+
+## SQL Dump
+
+The SQL dump is published to Zenodo (I am unsure if we should post the link here, so the link will be in the comments of the submission).
 

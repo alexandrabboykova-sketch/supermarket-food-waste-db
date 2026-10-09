@@ -1,9 +1,11 @@
 # Real life data query Results
 
-### First statement: ⁠ SELECT * FROM food_waste WHERE supermarket_id IN (6, 7, 8, 9) ⁠
-Returns *212 rows* (waste_id 21–232): Brazil Stores 1–3 and the US. Not reproduced here.
+## Findings: 
+
+Overall, most queries acted as expected. The restrictions are noted below the results. 
 
 ### Query 1: Total waste per supermarket
+
 | supermarket_name | total_food_wasted |
 |---|---:|
 | US supermarkets (national total) | 5,458,530,580.58 |
@@ -13,12 +15,14 @@ Returns *212 rows* (waste_id 21–232): Brazil Stores 1–3 and the US. Not repr
 | Brazil Store 2 | 234.90 |
 
 ### Query 2: Waste by category
+
 | category | amount_food_wasted |
 |---|---:|
 | Vegetable | 2,761,052,007.39 |
 | Fruit | 2,697,534,260.86 |
 
 ### Query 3: Products wasted for "rejected at delivery and in-store waste"
+
 | product | food_wasted | waste_reason |
 |---|---:|---|
 | Potato | 10,000.00 | rejected at delivery and in-store waste |
@@ -43,16 +47,19 @@ Returns *212 rows* (waste_id 21–232): Brazil Stores 1–3 and the US. Not repr
 | Rambutan | 8.57 | rejected at delivery and in-store waste |
 
 ### Query 4: Main reasons for waste
+
 | waste_reason | number_of_records | total_food_wasted |
 |---|---|---:|
 | rejected at delivery and in-store waste | 20 | 53,527.37 |
 
 ### Query 5: Products at risk (expired inventory)
+
 Empty set (0 rows returned).
 
 This is as no real data was found with experied. Primarily works with mock data.
 
 ### Query 6: Money lost per supermarket
+
 | supermarket_name | country | money_lost |
 |---|---|---:|
 | US supermarkets (national total) | United States | 23,560,145,616.4151 |
@@ -62,6 +69,7 @@ This is as no real data was found with experied. Primarily works with mock data.
 | Brazil Store 2 | Brazil | 897.2810 |
 
 ### Query 7: Waste by shelf life
+
 | shelf_life_days | number_of_waste_records | total_food_wasted |
 |---|---|---:|
 | 2 | 5 | 166,468,529.79 |
@@ -78,7 +86,8 @@ This is as no real data was found with experied. Primarily works with mock data.
 | 30 | 21 | 736,190,656.71 |
 | 90 | 2 | 13,607,774.10 |
 
-*### Query 8: Waste per product (103 rows)*
+### Query 8: Waste per product
+
 | product | total_food_wasted |
 |---|---:|
 | Watermelon | 482,168,715.61 |

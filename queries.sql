@@ -142,8 +142,7 @@ SELECT
     SUM(food_waste.quantity_wasted) AS total_wasted_kg,
     ROUND(
         SUM(food_waste.quantity_wasted)*100 /
-        (
-            SELECT SUM(quantity_wasted)
+        (   SELECT SUM(quantity_wasted)
             FROM food_waste
         ),
         2) 

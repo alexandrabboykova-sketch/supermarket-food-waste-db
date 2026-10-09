@@ -21,6 +21,9 @@ The database consists of seven tables:
 7. `food_waste` - Records products that have been wasted, including the supermarket, product, disposal method, quantity, date, and reason.
 
 The tables are connected using primary keys and foreign keys based on the project's ERD.
+## Students in Project 
+ Despina Chalkiadaki ID:6423256
+ Lucie Turkova ID:6433383
 
 ## Project Structure
 

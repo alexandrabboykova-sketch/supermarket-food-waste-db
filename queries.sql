@@ -29,7 +29,7 @@ SELECT *
 FROM food_waste
 WHERE supermarket_id IN (6, 7, 8, 9);
 
--- Query done by: Lucie
+-- Query 1 done by: Lucie
 -- This query shows the total amount of food waste recorded for each supermarket.
 -- The results are ordered from highest to lowest to identify which supermarkets had the largest recorded food waste.
 -- This was not changed once real data was integrated.
@@ -43,7 +43,7 @@ LEFT JOIN food_waste
 GROUP BY supermarket.supermarket_id, supermarket.name
 ORDER BY total_food_wasted DESC;
 
--- Query done by: Lucie
+-- Query 2 done by: Lucie
 -- This Query shows which food category was wasted the most. This query is more robust with the mock data.
 -- However, it does still work in the real data, there are just two categories though. This query was also not changed upon real world data insertion.
 SELECT
@@ -57,7 +57,7 @@ JOIN food_waste
 GROUP BY category.category_id, category.category_name
 ORDER BY amount_food_wasted DESC;
 
--- Query done by: Lucie
+-- Query 3 done by: Lucie
 -- This Query originally answered which products were wasted because they Experied. However, once the real life data was introduced
 -- the reason was changed to 'rejected at delivery and in-store waste'. This was done to make sure results were returned. 
 
@@ -70,6 +70,8 @@ JOIN food_waste
     ON product.product_id = food_waste.product_id
 WHERE food_waste.reason = 'rejected at delivery and in-store waste'
 ORDER BY food_waste.quantity_wasted DESC;
+
+--All queries after this point were written for the FINAL project. This means they are real data oriented. However, most work on the mock data too.
 
 -- Query 4 - Main Reasons for Food Waste -Despina 
 -- This query shows the main reasons why food waste is recorded.
